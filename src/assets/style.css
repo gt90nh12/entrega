@@ -1,0 +1,278 @@
+
+#trazabilidad_vehiculo {
+  background: red;
+}
+
+#trazabilidad_vehiculo__titulo {
+  background: rgba(128, 128, 128, 0.2);
+  /*box-shadow: 5px 0 15px 0 color(plomo-base)inset,
+		           -5px 0 15px 0 color(plomo-base)inset,
+		            0  5px 15px 0 color(plomo-base)inset,
+		            0  -5px 15px 0 color(plomo-base)inset;*/
+  border: 0px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+}
+
+#trazabilidad_vehiculo__titulo p {
+  align-self: center;
+  color: #ffffff;
+  border: 0px;
+  margin: 0px;
+  text-align: center;
+  padding: 0px;
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+#trazabilidad_vehiculo__titulo span {
+  background: #18bc9c;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  border: 0px;
+  color: #ffffff;
+  margin: 0px;
+  margin-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 9px;
+  font-weight: bold;
+}
+
+#trazabilidad_vehiculo__camiones {
+  display: flex;
+  height: 255px;
+  width: 100%;
+}
+.Contendor-camiones {
+  box-shadow: 1px 0 0 0 #585757 inset, -1px 0 0 0 #585757 inset, 0 -1px 0 0 #585757 inset, 0 1px 3px 0 #585757 inset;
+  border: 0px;
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
+  height: 255px;
+  width: 100%;
+}
+
+.Contendor-camiones__lista {
+  align-items: center;
+  border: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  height: 245px;
+  width: 100%;
+}
+.Contendor-camiones__lista {
+  align-items: center;
+  border: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  height: 245px;
+  width: 100%;
+}
+
+.vehiculo-empresa {
+  background: -webkit-linear-gradient(top, #C7C5C3, #eaeaea, #C7C5C3, #eaeaea);
+  box-shadow: 0 0 0 1px #585757, 0 30px 0 0 #ffffff inset, 0 -30px 0 0 #ffffff inset, 10px 0 0 0 #ffffff inset, -10px 0 0 0 #ffffff inset, 0 7px 8px 0;
+  border: 0px;
+  border-radius: 15px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  height: 225px;
+  width: 150px;
+}
+
+.vehiculo-empresa__placa {
+  align-items: flex-end;
+  align-items: center;
+  background: #00A2AA;
+  border: 0px;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  box-shadow: 1px 0 0 0 #585757 inset, 4px 0 0 0 #ffffff inset, 5px 0 0 0 #585757 inset, -1px 0 0 0 #585757 inset, -4px 0 0 0 #ffffff inset, -5px 0 0 0 #585757 inset, 0 -1px 0 0 #585757 inset, 0 -4px 0 0 #ffffff inset, 0 -5px 0 0 #585757 inset;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  height: 55px;
+  width: 115px;
+}
+
+.vehiculo-empresa__placa span {
+  border: 0px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: normal;
+  margin: -7px;
+  text-shadow: none;
+  padding: 0px;
+}
+
+.vehiculo-empresa__imagen {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5px;
+  height: 80px;
+  width: 120px;
+}
+
+.vehiculo-empresa__opciones {
+  background: #3A3A3A;
+  border: 0px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  box-shadow: 1px 0 0 0 #585757 inset, 4px 0 0 0 #ffffff inset, 5px 0 0 0 #585757 inset, -1px 0 0 0 #585757 inset, -4px 0 0 0 #ffffff inset, -5px 0 0 0 #585757 inset, 0 1px 0 0 #585757 inset, 0 4px 0 0 #ffffff inset, 0 5px 0 0 #585757 inset;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  margin: 0px;
+  margin-top: 5px;
+  padding: 0px;
+  height: 80px;
+  width: 115px;
+}
+.trazabilidad-vehiculo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.trazabilidad-vehiculo__imagen {
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUwMi42NjQgNTAyLjY2NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTAyLjY2NCA1MDIuNjY0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik00NzIuMDc3LDI1LjQzMkgzMC42MDlDMTMuNzYyLDI1LjQzMiwwLDM5LjIxNiwwLDU2LjAxOXYzMTcuNDE0ICAgICBjMCwxNi43ODIsMTMuNzYyLDMwLjU4NywzMC42MDksMzAuNTg3aDQ0MS40NjhjMTYuODI1LDAsMzAuNTg3LTEzLjgwNSwzMC41ODctMzAuNTg3VjU2LjAxOSAgICAgQzUwMi42NjQsMzkuMjE2LDQ4OC45MDIsMjUuNDMyLDQ3Mi4wNzcsMjUuNDMyeiBNNDY0LjM3NiwzNTAuOTM1SDM4LjI4OFY2OC4zMzZoNDI2LjA4OFYzNTAuOTM1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCQk8cG9seWdvbiBwb2ludHM9IjE5NC42OTgsNDE4LjUzOCAxMzYuOTMxLDQ3Ny4yMzIgMzY2LjU3NCw0NzcuMjMyIDMwOC44MDcsNDE4LjUzOCAgICAiIGZpbGw9IiNGRkZGRkYiLz4KCQkJPHBhdGggZD0iTTEwMy4zNDYsMjk0LjI2OWMxMS4yODIsMCwyMC40NzEtOS4xNjgsMjAuNDcxLTIwLjQ0OWMwLTIuMDQ5LTAuNjA0LTMuOTA0LTEuMTY1LTUuNzgxICAgICBjMjYuMTY1LTIxLjA5Niw3Mi4zOTItNTguMjg0LDkzLjQ2Ni03NC41MjdjMy4zMjIsMi4zNTEsNy4xODMsNC4wMzQsMTEuNTYyLDQuMDM0YzMuNjQ1LDAsNi44ODEtMS4yMDgsOS44MzYtMi44NjkgICAgIGMxMy41NDYsMTEuNTE5LDM2LjU4NCwzMS4xMDUsNTIuOTM1LDQ1LjAxOGMtMC4yMTYsMS4xODYtMC42OSwyLjI0My0wLjY5LDMuNDk0YzAsMTEuMzAzLDkuMTg5LDIwLjQ3MSwyMC40OTIsMjAuNDcxICAgICBzMjAuNDkyLTkuMTY4LDIwLjQ5Mi0yMC40NzFjMC0yLjAwNi0wLjYwNC0zLjg0LTEuMTQzLTUuNjczbDUyLjkzNS00Ny44MDFjMi44NDcsMS40ODgsNS45MSwyLjU0NSw5LjM2MiwyLjU0NSAgICAgYzExLjMwMywwLDIwLjQ3MS05LjE2OCwyMC40NzEtMjAuNDcxcy05LjE2OC0yMC40NzEtMjAuNDcxLTIwLjQ3MXMtMjAuNDQ5LDkuMTY4LTIwLjQ0OSwyMC40OTJjMCwyLjY5NiwwLjU4Miw1LjI2MywxLjUzMSw3LjYxNCAgICAgYy0xNC43OTgsMTMuMzUyLTM3LjYxOSwzMy45NzQtNTEuODU2LDQ2LjgzYy0zLjE3MS0yLjA0OS02Ljc1Mi0zLjU1OS0xMC44NS0zLjU1OWMtNC44MzIsMC05LjA2LDEuOTItMTIuNTU0LDQuNzAyICAgICBjLTEzLjUyNS0xMS40OTctMzUuMzk4LTMwLjA5MS01MC45NS00My4zMTRjMC44Mi0yLjIsMS40MDItNC41MDgsMS40MDItNy4wMWMwLTExLjMwMy05LjE2OC0yMC40NzEtMjAuNDcxLTIwLjQ3MSAgICAgcy0yMC40NzEsOS4xNjgtMjAuNDcxLDIwLjQ3MWMwLDIuNTAyLDAuNjA0LDQuODMyLDEuNDI0LDcuMDMybC05My45NjIsNzMuMTAzYy0zLjI3OS0yLjI0My03LjA1NC0zLjg4My0xMS4zMjUtMy44ODMgICAgIGMtMTEuMzAzLDAtMjAuNDcxLDkuMTY4LTIwLjQ3MSwyMC40NzFDODIuODc1LDI4NS4xMDEsOTIuMDQzLDI5NC4yNjksMTAzLjM0NiwyOTQuMjY5eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTwvZz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  height: 63%;
+  width: 100%;
+}
+
+.trazabilidad-vehiculo__descripcion {
+  color: #ffffff;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  height: 27%;
+  width: 100%;
+}
+.invisiblemap {
+  /*visibility: hidden;*/
+}
+
+.visiblemap {
+  /*visibility: visible;*/
+}
+
+.OpcionCamionVer {
+  /* Small only */
+  /* Medium and up */
+  /* Medium only */
+  /* Large and up */
+  /* Large only */
+}
+
+@media screen and (max-width: 39.9375em) {
+  .OpcionCamionVer {
+    bottom: 0px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    height: 290px;
+    width: 100%;
+    right: 0px;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .OpcionCamionVer {
+    bottom: 0px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    height: 290px;
+    width: 100%;
+    right: 0px;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .OpcionCamionVer {
+    bottom: 0px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    height: 290px;
+    width: 100%;
+    right: 0px;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .OpcionCamionVer {
+    bottom: 0px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    padding-left: 250px;
+    position: fixed;
+    height: 290px;
+    width: 100%;
+    right: 0px;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+  .OpcionCamionVer {
+    bottom: 0px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    padding: 0px;
+    padding-left: 250px;
+    position: fixed;
+    height: 290px;
+    width: 100%;
+    right: 0px;
+    z-index: 100;
+  }
+}
+
+.OpcionCamionOcultar {
+  /*display: none;*/
+}
+#my-info{
+	z-index:150;
+}
