@@ -1,178 +1,434 @@
 <style>
-	.tabla-informacion__Cabecera {
-		background: #18bc9c;
-		box-shadow: 4px 0 0 0 #044034 inset, -4px 0 0 0 #044034 inset, 0 4px 0 0 #044034 inset, 0 -4px 0 0 #044034 inset;
-		height: 10%;
-		width: 100%;
-		text-align: center;
-		font-weight: bold;
-	}
+.tabla-informacion__Piepagina {
+	background: -webkit-linear-gradient(top, #00396b, #ffffff);
+	box-shadow: 0 5px 6px 0 #19242B;
+	align-items: center;
+	display: flex;
+	height: 11%;
+	justify-content: space-around;
+}
+.Informacion-movil {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+.Informacion-movil__datos {
+	box-shadow: 5px 0 6px 0 #19242B inset, -5px 0 6px 0 #19242B inset;
+	border-top: 20px solid #012443;
+	border-left: 20px solid #FEFEFE;
+	border-right: 20px solid #FEFEFE;
+	border-bottom: 20px solid #012443;
+	text-align: center;
+	font-size: 1em;
+	overflow: auto;
+	height: 65%;
+	width: 100%;
+}
 
-	.tabla-informacion__Cabecera h3 {
-		text-shadow: 1px 1px 2px black, 0 0 1em #68f4d9, 0 0 0.2em #68f4d9;
-		color: white;
-		font-weight: bold;
-	}
+.Informacion-movil__datos p {
+	font-weight: bolder;
+	display: block;
+	border: 0px;
+	border-bottom: 1px solid #19242B;
+	font-size: 1em;
+	margin: 0px;
+	padding: 8px;
+}
+.Informacion-movil__imagen {
+	border: 0px;
+	background: -webkit-linear-gradient(#73a6d1, #00396b);
+	background: -o-linear-gradient(#73a6d1, #00396b);
+	background: linear-gradient(#73a6d1, #00396b);
+	align-self: center;
+	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.22) inset;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	height: 35%;
+	width: 100%;
+}
+.Informacion-movil__imagen img {
+	margin-top: 5px;
+	height: 91%;
+	width: 97%;
+}
+/************ diseño de punto de geolocalizacion ***********/
+.TRACKING__DESACTIVADO {
+	box-shadow: 0 0 0 1px #19242B inset, 0 0 6px 2px #ffffff inset, 0 0 9px 7px #585757 inset, 0 0 19px 17px #eaeaea inset, 0 0 2px 1px #eaeaea;
+	border: 0px;
+	border-radius: 50%;
+	color: transparent;
+	display: table;
+	margin: 0px;
+	margin-left: 7px;
+	font-size: bold;
+	padding: 0px;
+	height: 50px;
+	width: 50px;
+}
+#Tracking-estado {
+	align-self: flex-center;
+	box-shadow: 0 0 0 1px #19242B inset, 0 0 6px 2px #ffffff inset, 0 0 9px 7px #585757 inset, 0 0 19px 17px #eaeaea inset, 0 0 2px 1px #eaeaea;
+	border: 0px;
+	border-radius: 50%;
+	color: transparent;
+	display: table;
+	margin: 0px;
+	margin-left: 7px;
+	font-size: bold;
+	padding: 0px;
+	height: 50px;
+	width: 50px;
+}
+/**************** Diseño de perfil de usuario ****************/
+.perfil{
+	border: #00396b 8px outset;
+	display: flex;
+}
+.perfil-nombre{
+	width: 80%;
+	text-align: left;
+	padding-left: 5px;
+}
+.perfil-nombre-usuario{
+	margin: 0px;
+	border:0px;
+	padding: 0px;
+}
+.perfil-nombre-cargo{
+	font-size: 0.7em;
+	font-weight: bold;
+	font-size: center;
+	margin: 0px;
+	border:0px;
+	padding: 0px;
+}
+.perfil-imagen{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+}
+.perfil-imagen img{
+	height: 43px;
+	width: 43px;
+	border-radius: 50%;
+}
+/****************** Diseño general plantilla *****************/
+#app{
+	margin:5px;
+}
+.btn-salir{
+	background: red;
+	border:0px;
+	color: #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin: 0.5em;
+}
+/****************** Estilos de los camiones  ******************/
+#trazabilidad_vehiculo{
+	background:red;
+	&__titulo{
+		background:rgba(128,128,128,.2);
+		/*box-shadow: 5px 0 15px 0 color(plomo-base)inset,
+		           -5px 0 15px 0 color(plomo-base)inset,
+		            0  5px 15px 0 color(plomo-base)inset,
+		            0  -5px 15px 0 color(plomo-base)inset;*/
+		            border:0px;
+		            align-items:center;
+		            display: flex;
+		            justify-content: space-between;
+		            margin:0px;
+		            padding:0px;
+		            height: 40px;
+		            p{
+		            	align-self:center;
+		            	//background:color(verde-claro);
+		            	color:color(blanco);
+		            	border:0px;
+		            	margin:0px;
+		            	text-align: center;
+		            	padding:0px;
+		            	font-size:1.5em;
+		            	margin-left: 10px;
+		            }
+		            span{
+		            	//display: table;
+		            	//align-self: center;
+		            	background:color(verde-base);
+		            	box-shadow:0 0 0 3px rgba(255,255,255,.5);
+		            	border-radius:3px;
+		            	border:0px;
+		            	color:color(blanco);
+		            	margin: 0px;
+		            	margin-right: 10px;
+		            	padding-top: 3px;
+		            	padding-bottom: 3px;
+		            	padding-left:10px;
+		            	padding-right:9px;
+		            	//height: 15px;
+		            	//font-size: 15;
+		            	font-weight: bold;
+		            	//height: 30px;
+		            }
+		        }
+		        &__camiones{
+		        	display: flex;
+		        	height: 255px;
+		        	width: 100%;
+		        }
+		    }
+		    .Contendor-camiones{
+		    	box-shadow: 1px 0 0 0 color(plomo-base)inset,
+		    	-1px 0 0 0 color(plomo-base)inset,
+		    	0 -1px 0 0 color(plomo-base)inset,
+		    	0 1px 3px 0 color(plomo-base)inset,;
+		    	border:0px;
+		    	overflow: auto;
+		    	margin:0px;
+		    	padding:0px;
+		    	height:255px;
+		    	width: 100%;
 
-	.tabla-informacion__RegistroCantidad {
-		color: black;
-		border: 0px;
-		margin: 0px;
-		padding: 0px;
-		padding-right: 3px;
-		padding-left: 3px;
-		font-size: 0.8em;
-	}
+		    	&__lista{
+		    		align-items:center;
 
-	.tabla-informacion__RegistroCantidadU {
-		color: black;
-		border: 0px;
-		border-bottom-right-radius: 6px;
-		margin: 0px;
-		padding: 0px;
-		padding-right: 3px;
-		padding-left: 3px;
-		font-size: 0.8em;
-	}
+		    		border:0px;
+		    		display:flex;
+		    		flex-wrap:wrap;
+		    		justify-content:center;
+		    		margin:0px;
+		    		padding:0px;
+		    		height: 245px;
+		    		width: 100%;
+		    	}
+		    }
+		    .vehiculo-empresa{
+		    	background:-webkit-linear-gradient(top,#C7C5C3,color(plomo-claro),#C7C5C3,color(plomo-claro));
+		    	box-shadow: 0 0 0 1px color(plomo-base),
+		    	0 30px 0 0 color(blanco)inset,
+		    	0 -30px 0 0 color(blanco)inset,
 
-	.tabla-informacion__Cuerpo {
-		height: 79%;
-	}
+		    	10px 0 0 0 color(blanco)inset,
+		    	-10px 0 0 0 color(blanco)inset,
 
-	.tabla-informacion__Piepagina {
-		background: -webkit-linear-gradient(top, #18bc9c, #ffffff);
-		box-shadow: 0 5px 6px 0 #19242B;
-		align-items: center;
-		display: flex;
-		height: 11%;
-		justify-content: space-around;
-	}
-	/*________ DISEÑO PARA MOVIL _________*/
-	.Informacion-movil {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 100%;
-		width: 100%;
-	}
+		    	0 7px 8px 0 color(plomo);
+		    	border:0px;
+		    	border-radius:15px;   	
+		    	margin:15px;
+		    	display:flex;
+		    	justify-content:center;
+		    	align-items:center;
+		    	flex-direction:column;
+		    	padding:0px;
+		    	height:225px;
+		    	width:150px;
+		    	&__placa{
+		    		align-items:flex-end;
+		    		align-items:center;
+		    		background:#00A2AA;
 
-	.Informacion-movil__datos {
-		box-shadow: 5px 0 6px 0 #19242B inset, -5px 0 6px 0 #19242B inset;
-		border-top: 20px solid #044034;
-		border-left: 20px solid #FEFEFE;
-		border-right: 20px solid #FEFEFE;
-		border-bottom: 20px solid #044034;
-		text-align: center;
-		font-size: 1em;
-		overflow: auto;
-		height: 65%;
-		width: 100%;
-	}
+		    		border:0px;
+		    		border-bottom-left-radius:11px;
+		    		border-bottom-right-radius:11px;
+		    		box-shadow: 1px 0 0 0 color(plomo-base)inset,
+		    		4px 0 0 0 color(blanco)inset,
+		    		5px 0 0 0 color(plomo-base)inset,
+		    		-1px 0 0 0 color(plomo-base) inset,
+		    		-4px 0 0 0 color(blanco) inset,
+		    		-5px 0 0 0 color(plomo-base)inset,
+		    		0 -1px 0 0 color(plomo-base)inset,
+		    		0 -4px 0 0 color(blanco)inset,
+		    		0 -5px 0 0 color(plomo-base)inset;
+		    		display: flex;
+		    		font-weight: bold;
+		    		flex-direction: column;
+		    		justify-content: center;
+		    		color:color(blanco);
+		    		text-align: center;
+		    		margin:0px;
+		    		padding:0px;
+		    		height:55px;
+		    		width: 115px;
+		    		span{
+		    			border:0px;
+		    			color:color(blanco);
 
-	.Informacion-movil__datos p {
-		border-radius: 4px;
-		font-weight: bold;
-		font-size: 1.1em;
-		border: 0px;
-		margin: 0px;
-		padding: 0px;
-	}
+		    			font-size: 10px;
+		    			font-weight: normal;
+		    			margin:-7px;
+		    			text-shadow: none;
+		    			padding:0px;
+		    		}
+		    	}
+		    	&__imagen{
+		    		border:0px;
+		    		margin:0px;
+		    		padding:0px;
+		    		margin-top: 5px;
+		    		height: 80px;
+		    		width: 120px;
+		    	}
+		    	&__opciones{
+		    		background:#3A3A3A;
+		    		border:0px;
+		    		border-top-left-radius:11px;
+		    		border-top-right-radius:11px;
+		    		box-shadow: 1px 0 0 0 color(plomo-base)inset,
+		    		4px 0 0 0 color(blanco)inset,
+		    		5px 0 0 0 color(plomo-base)inset,
+		    		-1px 0 0 0 color(plomo-base) inset,
+		    		-4px 0 0 0 color(blanco) inset,
+		    		-5px 0 0 0 color(plomo-base)inset,
+		    		0 1px 0 0 color(plomo-base)inset,
+		    		0 4px 0 0 color(blanco)inset,
+		    		0 5px 0 0 color(plomo-base)inset;
+		    		display: flex;
+		    		justify-content: center;
+		    		color:color(blanco);
+		    		text-align: center;
+		    		margin:0px;
+		    		margin-top: 5px;
+		    		padding:0px;
+		    		height: 80px;
+		    		width: 115px;
+		    	}
 
-	.Informacion-movil__datos span {
-		display: block;
-		border: 0px;
-		border-bottom: 1px solid #19242B;
-		font-size: 1em;
-		margin: 0px;
-		padding: 0px;
-	}
+		    }
+		    .trazabilidad-vehiculo{
+		    	align-items:center;
+		    	display:flex;
+		    	justify-content:center;
+		    	flex-direction:column;
 
-	.Informacion-movil__imagen {
-		border: 0px;
-		background: -webkit-linear-gradient(#044034, #18bc9c);
-		background: -o-linear-gradient(#044034, #18bc9c);
-		background: linear-gradient(#044034, #18bc9c);
-		align-self: center;
-		box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.22) inset;
-		text-align: center;
-		margin: 0px;
-		padding: 0px;
-		height: 35%;
-		width: 100%;
-	}
+		    	height:100%;
+		    	&__imagen{
+		    		background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUwMi42NjQgNTAyLjY2NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTAyLjY2NCA1MDIuNjY0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik00NzIuMDc3LDI1LjQzMkgzMC42MDlDMTMuNzYyLDI1LjQzMiwwLDM5LjIxNiwwLDU2LjAxOXYzMTcuNDE0ICAgICBjMCwxNi43ODIsMTMuNzYyLDMwLjU4NywzMC42MDksMzAuNTg3aDQ0MS40NjhjMTYuODI1LDAsMzAuNTg3LTEzLjgwNSwzMC41ODctMzAuNTg3VjU2LjAxOSAgICAgQzUwMi42NjQsMzkuMjE2LDQ4OC45MDIsMjUuNDMyLDQ3Mi4wNzcsMjUuNDMyeiBNNDY0LjM3NiwzNTAuOTM1SDM4LjI4OFY2OC4zMzZoNDI2LjA4OFYzNTAuOTM1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCQk8cG9seWdvbiBwb2ludHM9IjE5NC42OTgsNDE4LjUzOCAxMzYuOTMxLDQ3Ny4yMzIgMzY2LjU3NCw0NzcuMjMyIDMwOC44MDcsNDE4LjUzOCAgICAiIGZpbGw9IiNGRkZGRkYiLz4KCQkJPHBhdGggZD0iTTEwMy4zNDYsMjk0LjI2OWMxMS4yODIsMCwyMC40NzEtOS4xNjgsMjAuNDcxLTIwLjQ0OWMwLTIuMDQ5LTAuNjA0LTMuOTA0LTEuMTY1LTUuNzgxICAgICBjMjYuMTY1LTIxLjA5Niw3Mi4zOTItNTguMjg0LDkzLjQ2Ni03NC41MjdjMy4zMjIsMi4zNTEsNy4xODMsNC4wMzQsMTEuNTYyLDQuMDM0YzMuNjQ1LDAsNi44ODEtMS4yMDgsOS44MzYtMi44NjkgICAgIGMxMy41NDYsMTEuNTE5LDM2LjU4NCwzMS4xMDUsNTIuOTM1LDQ1LjAxOGMtMC4yMTYsMS4xODYtMC42OSwyLjI0My0wLjY5LDMuNDk0YzAsMTEuMzAzLDkuMTg5LDIwLjQ3MSwyMC40OTIsMjAuNDcxICAgICBzMjAuNDkyLTkuMTY4LDIwLjQ5Mi0yMC40NzFjMC0yLjAwNi0wLjYwNC0zLjg0LTEuMTQzLTUuNjczbDUyLjkzNS00Ny44MDFjMi44NDcsMS40ODgsNS45MSwyLjU0NSw5LjM2MiwyLjU0NSAgICAgYzExLjMwMywwLDIwLjQ3MS05LjE2OCwyMC40NzEtMjAuNDcxcy05LjE2OC0yMC40NzEtMjAuNDcxLTIwLjQ3MXMtMjAuNDQ5LDkuMTY4LTIwLjQ0OSwyMC40OTJjMCwyLjY5NiwwLjU4Miw1LjI2MywxLjUzMSw3LjYxNCAgICAgYy0xNC43OTgsMTMuMzUyLTM3LjYxOSwzMy45NzQtNTEuODU2LDQ2LjgzYy0zLjE3MS0yLjA0OS02Ljc1Mi0zLjU1OS0xMC44NS0zLjU1OWMtNC44MzIsMC05LjA2LDEuOTItMTIuNTU0LDQuNzAyICAgICBjLTEzLjUyNS0xMS40OTctMzUuMzk4LTMwLjA5MS01MC45NS00My4zMTRjMC44Mi0yLjIsMS40MDItNC41MDgsMS40MDItNy4wMWMwLTExLjMwMy05LjE2OC0yMC40NzEtMjAuNDcxLTIwLjQ3MSAgICAgcy0yMC40NzEsOS4xNjgtMjAuNDcxLDIwLjQ3MWMwLDIuNTAyLDAuNjA0LDQuODMyLDEuNDI0LDcuMDMybC05My45NjIsNzMuMTAzYy0zLjI3OS0yLjI0My03LjA1NC0zLjg4My0xMS4zMjUtMy44ODMgICAgIGMtMTEuMzAzLDAtMjAuNDcxLDkuMTY4LTIwLjQ3MSwyMC40NzFDODIuODc1LDI4NS4xMDEsOTIuMDQzLDI5NC4yNjksMTAzLjM0NiwyOTQuMjY5eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTwvZz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+		    		background-repeat: no-repeat;
+		    		background-size:50px;
+		    		background-position-x: 50%;
+		    		background-position-y: 50%;
+		    		height: 63%;
+		    		width: 100%;
+		    	}
+		    	&__descripcion{
 
-	.Informacion-movil__imagen img {
-		margin-top: 5px;
-		height: 91%;
-		width: 97%;
-	}
+		    		color:color(blanco);
+		    		border:0px;
+		    		margin:0px;
 
-	.boton_anterior {
-		background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDYxMiA2MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA2MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iX3gzNF9fMzdfIj4KCQk8Zz4KCQkJPHBhdGggZD0iTTIyNC42MDQsMTIwLjc1NWMtNy41NTQtNy41MTYtMTkuNzc1LTcuNTE2LTI3LjMzLDBzLTcuNTU0LDE5LjY5OSwwLDI3LjIxNWwxNTguOTA5LDE1OC4zMzZMMTk3LjI3NCw0NjQuNjQyICAgICBjLTcuNTU0LDcuNTE3LTcuNTU0LDE5LjY5OSwwLDI3LjIxNWM3LjU1NCw3LjUxNywxOS43NzUsNy41MTcsMjcuMzMsMGwxNzEuNTg5LTE3MC45NzhjNC4wMzUtNC4wMTYsNS43MzctOS4zMTMsNS40Ny0xNC41NzIgICAgIGMwLjI2OC01LjI0MS0xLjQ1My0xMC41NTgtNS40Ny0xNC41NzRMMjI0LjYwNCwxMjAuNzU1eiBNNTM1LjUsMGgtNDU5QzM0LjI1MywwLDAsMzQuMjUzLDAsNzYuNXY0NTkgICAgIEMwLDU3Ny43NDcsMzQuMjUzLDYxMiw3Ni41LDYxMmg0NTljNDIuMjQ3LDAsNzYuNS0zNC4yNTMsNzYuNS03Ni41di00NTlDNjEyLDM0LjI1Myw1NzcuNzQ3LDAsNTM1LjUsMHogTTU3My43NSw1MzUuNSAgICAgYzAsMjEuMTE0LTE3LjExNywzOC4yNS0zOC4yNSwzOC4yNWgtNDU5Yy0yMS4xMzMsMC0zOC4yNS0xNy4xMzYtMzguMjUtMzguMjV2LTQ1OWMwLTIxLjExNCwxNy4xMTctMzguMjUsMzguMjUtMzguMjVoNDU5ICAgICBjMjEuMTMzLDAsMzguMjUsMTcuMTM2LDM4LjI1LDM4LjI1VjUzNS41eiIgZmlsbD0iIzE5MjQyYiIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
-		background-color: #eaeaea;
-		-moz-transform: rotate(180deg);
-		-o-transform: rotate(180deg);
-		-webkit-transform: rotate(180deg);
-		transform: rotate(180deg);
-		border: 0px;
-		border-radius: 3px;
-		display: table;
-		margin: 0px;
-		padding: 0px;
-		height: 32px;
-		width: 32px;
-	}
-	.boton_siguente {
-		max-width: 256px;
-		max-height: 256px;
-		background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDYxMiA2MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA2MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iX3gzNF9fMzdfIj4KCQk8Zz4KCQkJPHBhdGggZD0iTTIyNC42MDQsMTIwLjc1NWMtNy41NTQtNy41MTYtMTkuNzc1LTcuNTE2LTI3LjMzLDBzLTcuNTU0LDE5LjY5OSwwLDI3LjIxNWwxNTguOTA5LDE1OC4zMzZMMTk3LjI3NCw0NjQuNjQyICAgICBjLTcuNTU0LDcuNTE3LTcuNTU0LDE5LjY5OSwwLDI3LjIxNWM3LjU1NCw3LjUxNywxOS43NzUsNy41MTcsMjcuMzMsMGwxNzEuNTg5LTE3MC45NzhjNC4wMzUtNC4wMTYsNS43MzctOS4zMTMsNS40Ny0xNC41NzIgICAgIGMwLjI2OC01LjI0MS0xLjQ1My0xMC41NTgtNS40Ny0xNC41NzRMMjI0LjYwNCwxMjAuNzU1eiBNNTM1LjUsMGgtNDU5QzM0LjI1MywwLDAsMzQuMjUzLDAsNzYuNXY0NTkgICAgIEMwLDU3Ny43NDcsMzQuMjUzLDYxMiw3Ni41LDYxMmg0NTljNDIuMjQ3LDAsNzYuNS0zNC4yNTMsNzYuNS03Ni41di00NTlDNjEyLDM0LjI1Myw1NzcuNzQ3LDAsNTM1LjUsMHogTTU3My43NSw1MzUuNSAgICAgYzAsMjEuMTE0LTE3LjExNywzOC4yNS0zOC4yNSwzOC4yNWgtNDU5Yy0yMS4xMzMsMC0zOC4yNS0xNy4xMzYtMzguMjUtMzguMjV2LTQ1OWMwLTIxLjExNCwxNy4xMTctMzguMjUsMzguMjUtMzguMjVoNDU5ICAgICBjMjEuMTMzLDAsMzguMjUsMTcuMTM2LDM4LjI1LDM4LjI1VjUzNS41eiIgZmlsbD0iIzE5MjQyYiIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
-		background-color: #eaeaea;
-		border: 0px;
-		border-radius: 3px;
-		display: table;
-		margin: 0px;
-		padding: 0px;
-		height: 32px;
-		width: 32px;
-	}
-	/************ diseño de punto de geolocalizacion ***********/
-	.TRACKING__DESACTIVADO {
-		box-shadow: 0 0 0 1px #19242B inset, 0 0 6px 2px #ffffff inset, 0 0 9px 7px #585757 inset, 0 0 19px 17px #eaeaea inset, 0 0 2px 1px #eaeaea;
-		border: 0px;
-		border-radius: 50%;
-		color: transparent;
-		display: table;
-		margin: 0px;
-		margin-left: 7px;
-		font-size: bold;
-		padding: 0px;
-		height: 30px;
-		width: 30px;
-	}
-	#Tracking-estado {
-		align-self: flex-center;
-		box-shadow: 0 0 0 1px #19242B inset, 0 0 6px 2px #ffffff inset, 0 0 9px 7px #585757 inset, 0 0 19px 17px #eaeaea inset, 0 0 2px 1px #eaeaea;
-		border: 0px;
-		border-radius: 50%;
-		color: transparent;
-		display: table;
-		margin: 0px;
-		margin-left: 7px;
-		font-size: bold;
-		padding: 0px;
-		height: 30px;
-		width: 30px;
-	}
+		    		padding:0px;
+		    		height: 27%;
+		    		width:100%;
+		    	}
+		    }
+		    .invisiblemap{
+		    	visibility: hidden;
+		    }
+		    .visiblemap{
+		    	visibility: visible;
+		    }
+		    .OpcionCamionVer{
+/*@media screen and (max-width: 39.9375em) {
+	bottom:0px;
+	border:0px;
+	background:rgba(0,0,0,0.5);
+	margin:0px;
+	padding:0px;
+	position:fixed;
+	height:290px;
+	width:100%;
+	right:0px;
+	z-index:100;
+}
+
+
+@media screen and (min-width: 40em) {
+	bottom:0px;
+	border:0px;
+	background:rgba(0,0,0,0.5);
+	margin:0px;
+	padding:0px;
+	position:fixed;
+	height:290px;
+	width:100%;
+	right:0px;
+	z-index:100;
+
+}
+
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+bottom:0px;
+	border:0px;
+	background:rgba(0,0,0,0.5);
+	margin:0px;
+	padding:0px;
+	position:fixed;
+	height:290px;
+	width:100%;
+	right:0px;
+	z-index:100;
+}
+
+
+@media screen and (min-width: 64em) {
+bottom:0px;
+	border:0px;
+	background:rgba(0,0,0,0.5);
+	margin:0px;
+	padding-left:250px;
+	position:fixed;
+	height:290px;
+	width:100%;
+	right:0px;
+	z-index:100;}
+
+
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+bottom:0px;
+	border:0px;
+	background:rgba(0,0,0,0.5);
+	margin:0px;
+	padding:0px;
+	padding-left:250px;
+	position:fixed;
+	height:290px;
+	width:100%;
+	right:0px;
+	z-index:100;
+}
+*/
+}
+.OpcionCamionOcultar{
+	display:block;
+}
+#my-info{
+	z-index:150;
+}
+
 </style>
 <template>
 	<div id="app">
-		<button @click="logout()">salir</button>
+		<div class="perfil">
+			<div class="perfil-nombre">
+				<p class="perfil-nombre-usuario">Edgar Dilmar Peralta Limachi</p>
+				<p class="perfil-nombre-cargo">Conductor de vehiculo</p>
+			</div>
+			<div class="perfil-imagen">
+				<img src="https://firebasestorage.googleapis.com/v0/b/edgar-902a5.appspot.com/o/perfilEdgar.jpg?alt=media&token=eb5de388-9052-4180-a777-b316c0ebbaa5">
+			</div>
+		</div>
 		<div id="infoTRACKING"></div>
 		<div class="tabla-informacion">
-			<div class="tabla-informacion__Cabecera">
+			<!--<div class="tabla-informacion__Cabecera">
 				<h3>VEHICULO</h3>
-			</div>
+			</div>-->
 			<div class="tabla-informacion__Cuerpo">
 				<div class="Informacion-movil">
 					<div class="Informacion-movil__imagen">
@@ -180,208 +436,92 @@
 					</div>
 					<div class="Informacion-movil__datos">
 						<div class="tabla-informacion__descripcion">
-							<p>Placa de circulacion</p><span id="V_PLACA_VEHICULO">4587TFR</span>
-							<p>Capacidad de carga</p><span id="V_PLACA_REMOLQUE">15 toneldas</span>
-							<p>Tipo de remolque</p><span id="V_TIPO_REMOLQUE">Caja abierta</span>
-							<p>Longitud vehiculo</p><span id="V_VEHICULO_LONGITUD">15 Mtrs.</span>
-							<p>Jorge Alegre</p><span id="V_VEHICULO_ESTADO"></span>
+							
+							<p>50 Barras de a transportar Fierro corrugado 5/8</p>
+							<p>50 bolsas de cemento YURA</p>
+							<p>2 Bolsas de clavo de calamina de medida 1 1/2 pulgadas</p>
+							
 						</div>
 						<div class="tabla-informacion__datos"></div>
 					</div>
 				</div>
 			</div>
 			<div class="tabla-informacion__Piepagina">
-				<div>
-					<p @click="producto()">Cargue Productos</p>
-				</div>
+
 				<div>
 					<label id="Tracking-estado" class="TRACKING__DESACTIVADO">.</label>
 				</div>
-				<div>
-					<p @click="entrega()">Entrega Productos</p>
-				</div>
+				<button class="btn-salir" @click="logout()">X</button>
 			</div>
 		</div>
 		<div id="map"></div>
+		
 	</div>
 </template>
 <script>
-	import db from '@/firebase/init'
-	import firebase from 'firebase'
-	import "ol/ol.css";
-	import ol_Map from "ol/Map";
-	import ol_View from "ol/View";
-	import ol_Geolocation from 'ol/Geolocation';
-	import { defaults as defaultControls, ScaleLine } from "ol/control";
-	import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
-	import {OSM, Vector as VectorSource} from 'ol/source';
-	const view = new ol_View({center: [0, 0],zoom: 2})
-	const map = new ol_Map({})
-	const geolocation = new ol_Geolocation({
-		projection: map.getView().getProjection(),
-		tracking: true,
-		trackingOptions:{
-			enableHighAccuracy:true,
-			maximunAge:9000
+import db from '@/firebase/init'
+import firebase from 'firebase'
+import "ol/ol.css";
+import ol_Map from "ol/Map";
+import ol_View from "ol/View";
+import ol_Geolocation from 'ol/Geolocation';
+import { defaults as defaultControls, ScaleLine } from "ol/control";
+import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
+import {OSM, Vector as VectorSource} from 'ol/source';
+const view = new ol_View({center: [0, 0],zoom: 2})
+const map = new ol_Map({})
+const geolocation = new ol_Geolocation({
+	projection: map.getView().getProjection(),
+	tracking: true,
+	trackingOptions:{
+		enableHighAccuracy:true,
+		maximunAge:9000
+	}
+});
+geolocation.setTracking(true);
+const vehiculoPlaca = String;
+export default {
+	name:'geolocalizacion',
+	data(){
+		return{
+			user:null,
 		}
-	});
-	geolocation.setTracking(true);
-	const vehiculoPlaca = String;
-	export default {
-		name:'geolocalizacion',
-		data(){
-			return{
-				user:null,
-				traceability:'',
-				intervalid1: '',
-				unidad:String,
-				placa:String,
-			}
+	},
+	mounted : function(){
+		geolocation.on('change:position', function() {
+			var placa_registre = "3600AAA";
+			var h=0, m=0, s=0, hora_actual=""; var f="", m="", fecha_actual="", today=""; var myPos="";
+			var trackingJSON = new Object();var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
+			var f = new Date();fecha_actual = f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();today=new Date();h=today.getHours(); m=today.getMinutes(); s=today.getSeconds(); hora_actual = h+":"+m+":"+s;
+			trackingJSON = { fecha: fecha_actual, hora: hora_actual, exactitud_en_METROS: geolocation.getAccuracy(),posicion: geolocation.getPosition() };
+			db.database().ref("trazabilidad").child(placa_registre).push(trackingJSON);
+			console.log(trackingJSON);
+		});
+	},
+	methods:{
+		stop() {
+
+			geolocation.setTracking(false);
 		},
-		mounted : function(){
-			this.todo()     
+		entrega: function(){
+			console.log("termina la entrega")
+
 		},
-		methods:{
-			logout(){
-				firebase.auth().signOut().then(() => {
-					this.$router.push({name: 'Login'})
-				})
-			},
-			todo : function(){    
-			firebase.auth().onAuthStateChanged(user => {
-                    this.user=user;
-                    console.log(user.email);
-					/*----------------- IDENTIFICAR VEHCIUCLO -------------------*/
-					 var DB_firebase = db.database().ref();
-					 DB_firebase.on("value", function(snapshot) {
-					    var base_tiempo_real = snapshot.val();
-					    var Datos_camiones = base_tiempo_real.Camiones;
-					      for (var camion in Datos_camiones){
-					      	if(Datos_camiones[camion].correo == user.email){
-					      		// var vehiculoPlaca = Datos_camiones[camion].Placa_unidad_transporte;
-					      	}
-					      }
-					  }, function (error) {
-					    alert('No dentra al snapshot');
-					    console.log("Error: " + error.code);
-					  });
-					/*----------------- FIN IDENTIFICAR VEHICULO ----------------*/
-				
-    				this.traceability = setInterval(() => {
-					        geolocation.on('change:position', function() {
-	                		if (this.user == null){
-								clearInterval(this.traceability)
-					  		}
-                			console.log(user);
-							var placa_registre = "3600AAA";
-							var h=0, m=0, s=0, hora_actual=""
-							var f="", m="", fecha_actual="", today=""
-							var myPos="";
-							var trackingJSON = new Object();
-							var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
-							var f = new Date(); 
-							fecha_actual = f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();			                    
-							today=new Date(); 
-							h=today.getHours(); 
-							m=today.getMinutes(); 
-							s=today.getSeconds(); 
-							hora_actual = h+":"+m+":"+s;
-							trackingJSON = { 
-								fecha: fecha_actual,
-								hora: hora_actual,
-								exactitud_en_METROS: geolocation.getAccuracy(),
-								posicion: geolocation.getPosition()
-							}
-							console.log(trackingJSON);
-							db.database().ref("trazabilidad").child(placa_registre).push(trackingJSON)
-							console.log("Envia ubicacion")
-							});
-					}, 30000)                
-            })
+		logout(){
+			firebase.auth().signOut().then(() => {
+				geolocation.setTracking(false);
+				this.$router.push({name: 'Login'})
+			})
+		}
+	}
+};
 
 
- 
-				// this.intervalid1 = setInterval(function(){
-				// 	geolocation.on('change', function() {
-				// 		document.getElementById("Tracking-estado").style.boxShadow='0 0 0 1px #8D8D06 inset, 0 0 6px 2px #DBDB1F inset, 0 0 9px 7px #B4B417 inset, 0 0 19px 17px #DBDB1F inset, 0 0 2px 1px #DBDB1F';
-				// 	});
-				// 	geolocation.on('error', function(error) {
-				// 		var estado__Tracking=document.getElementById("Tracking-estado");
-				// 		var info = document.getElementById('infoTRACKING');
-				// 		info.innerHTML = "Error con la geolocalizacion";
-				// 		info.style.display = '';
-				// 		estado__Tracking.style.boxShadow='0 0 0 1px #A70014 inset, 0 0 6px 2px #FFFFFF inset, 0 0 9px 7px #FF3532 inset, 0 0 19px 17px #FF4B4B inset, 0 0 2px 1px #FF4B4B';
-				// 	});
-				// 	geolocation.on('change:position', function() {
-				// 		var placa_registre = "3011RYY";
-				// 		var h=0, m=0, s=0, hora_actual=""
-				// 		var f="", m="", fecha_actual="", today=""
-				// 		var myPos="";
-				// 		var trackingJSON = new Object();
-				// 		var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
-				// 		var f = new Date(); 
-				// 		fecha_actual = f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();			                    
-				// 		today=new Date(); 
-				// 		h=today.getHours(); 
-				// 		m=today.getMinutes(); 
-				// 		s=today.getSeconds(); 
-				// 		hora_actual = h+":"+m+":"+s;
-				// 		trackingJSON = { 
-				// 			fecha: fecha_actual,
-				// 			hora: hora_actual,
-				// 			exactitud_en_METROS: geolocation.getAccuracy(),
-				// 			posicion: geolocation.getPosition()
-				// 		}
-				// 		console.log(trackingJSON);
-				// 		db.database().ref("Trazabilidad").child(placa_registre).push(trackingJSON)
-				// 	});
-				// }, 30000);
-			},
-			producto: function(){
-				const placaVehiculo="3600AAA";
-				geolocation.once('change:position', function (evt) {
-					var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
-					var f = new Date(); 
-					var fecha_actual = f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
-					var today=new Date(); 
-					var h=today.getHours(); 
-					var m=today.getMinutes(); 
-					var s=today.getSeconds(); 
-					var hora_actual = h+":"+m+":"+s;
-					var myPos = geolocation.getPosition();
-					var  GEOLOCATION_OPENLAYERS={
-						myPos: myPos,
-						fecha: fecha_actual,
-						hora: hora_actual
-					}
-					db.database().ref(placaVehiculo).child("producto").set(GEOLOCATION_OPENLAYERS)
-					console.log(GEOLOCATION_OPENLAYERS);
-				});
-			},
-			entrega: function(){
-				const placaVehiculo="3600AAA";
-				geolocation.once('change:position', function (evt) {
-					var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
-					var f = new Date(); 
-					var fecha_actual = f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
-					var today=new Date(); 
-					var h=today.getHours(); 
-					var m=today.getMinutes(); 
-					var s=today.getSeconds(); 
-					var hora_actual = h+":"+m+":"+s;
-					var myPos = geolocation.getPosition();
-					var  GEOLOCATION_OPENLAYERS={
-						myPos: myPos,
-						fecha: fecha_actual,
-						hora: hora_actual
-					}
-					db.database().ref(placaVehiculo).child("entrega").set(GEOLOCATION_OPENLAYERS)
-					console.log(GEOLOCATION_OPENLAYERS);
-				});
-			}
-		}
-	};
+
+
 </script>
+
+
 
 
 

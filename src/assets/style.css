@@ -271,7 +271,7 @@
 }
 
 .OpcionCamionOcultar {
-  /*display: none;*/
+  display: none;
 }
 #my-info{
 	z-index:150;
